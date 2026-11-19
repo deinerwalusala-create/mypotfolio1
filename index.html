@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Deiner Walusala – Aspiring Data Scientist & Data Analyst. Portfolio showcasing data science, machine learning, and analytics projects.">
+  <meta property="og:title" content="Deiner Walusala – Data Science Portfolio">
+  <meta property="og:description" content="Transform raw data into meaningful insights. Explore projects in data analytics, ML, and statistical computing.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>Deiner Walusala | Data Scientist & Analyst</title>
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Loading Screen -->
+  <div id="loader" class="loader">
+    <div class="loader-content">
+      <div class="pulse-ring"></div>
+      <span class="loader-text">INITIALIZING DATA STREAM...</span>
+    </div>
+  </div>
+
+  <!-- Scroll Progress Bar -->
+  <div id="scroll-progress" class="scroll-progress"></div>
+
+  <!-- Custom Cursor Follower (Desktop) -->
+  <div id="cursor-follower" class="cursor-follower"></div>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html?page=home" class="nav-logo">DEINER<span>WALUSALA</span></a>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html?page=home" class="nav-link" data-page="home">Home</a>
+        <a href="index.html?page=about" class="nav-link" data-page="about">About</a>
+        <a href="index.html?page=skills" class="nav-link" data-page="skills">Skills</a>
+        <a href="index.html?page=projects" class="nav-link" data-page="projects">Projects</a>
+        <a href="index.html?page=workflow" class="nav-link" data-page="workflow">Workflow</a>
+        <a href="index.html?page=education" class="nav-link" data-page="education">Education</a>
+        <a href="index.html?page=github" class="nav-link" data-page="github">GitHub</a>
+        <a href="index.html?page=interests" class="nav-link" data-page="interests">Interests</a>
+        <a href="index.html?page=contact" class="nav-link" data-page="contact">Contact</a>
+      </div>
+      <div class="nav-actions">
+        <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
+          <i class="fas fa-moon"></i>
+        </button>
+        <button id="hamburger" class="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero section">
+    <div class="hero-bg-grid"></div>
+    <div class="floating-particles" id="particles"></div>
+    <div class="hero-container">
+      <div class="hero-content">
+        <div class="hero-badge"><i class="fas fa-database"></i> DATA DRIVEN</div>
+        <h1 class="hero-title">HELLO, I'M <span class="gradient-text">DEINER WALUSALA</span></h1>
+        <div class="typing-container">
+          <span class="typing-text" id="typingText"></span><span class="cursor-blink">|</span>
+        </div>
+        <p class="hero-intro">I transform raw data into meaningful insights, build analytical solutions and explore the power of artificial intelligence to solve real-world problems.</p>
+        <div class="hero-buttons">
+          <a href="index.html?page=projects" class="btn btn-primary"><i class="fas fa-chart-line"></i> EXPLORE MY PROJECTS</a>
+          <a href="assets/cv/deiner-walusala-cv.pdf" download class="btn btn-outline"><i class="fas fa-download"></i> DOWNLOAD CV</a>
+        </div>
+        <div class="hero-socials">
+          <a href="https://github.com/deinerwalusala-create" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="mailto:deinerwalusala@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+          <a href="#" aria-label="LinkedIn placeholder"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="data-orbit">
+          <div class="orbit-ring ring-1"></div>
+          <div class="orbit-ring ring-2"></div>
+          <div class="orbit-ring ring-3"></div>
+          <div class="profile-abstract">
+            <div class="profile-core"><i class="fas fa-brain"></i></div>
+            <div class="floating-icon icon-1"><i class="fab fa-python"></i></div>
+            <div class="floating-icon icon-2"><i class="fas fa-chart-pie"></i></div>
+            <div class="floating-icon icon-3"><i class="fas fa-database"></i></div>
+            <div class="floating-icon icon-4"><i class="fas fa-robot"></i></div>
+            <div class="floating-icon icon-5"><i class="fas fa-code"></i></div>
+            <div class="floating-icon icon-6"><i class="fas fa-table"></i></div>
+          </div>
+          <div class="data-stream">
+            <span class="num">42.7</span><span class="num">89.2</span><span class="num">13.5</span><span class="num">76.1</span>
+            <span class="num">99.9</span><span class="num">23.4</span><span class="num">56.8</span><span class="num">34.2</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-indicator"><span>SCROLL</span><div class="line"></div></div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">01 — WHO I AM</span>
+        <h2 class="section-title">ABOUT ME – <span class="gradient-text">BEHIND THE DATA</span></h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p>I am <strong>Deiner Walusala</strong>, a third-year Computer Science student at <strong>Masinde Muliro University of Science and Technology (MMUST)</strong>, Kenya. My journey in technology is driven by a deep curiosity about how data can be transformed into actionable knowledge.</p>
+          <p>I have been actively practising <strong>Python and R</strong> for data manipulation and analysis, and I am learning statistical analysis using <strong>SPSS and PSPP</strong>. I am passionate about <strong>Power BI</strong> and data visualization, and I am exploring <strong>Machine Learning and Artificial Intelligence</strong> to build intelligent systems.</p>
+          <p>I am committed to building practical projects that demonstrate my ability to clean, analyse, and interpret data — turning complex datasets into clear, meaningful insights.</p>
+          <div class="about-highlights">
+            <div class="highlight-item"><i class="fas fa-graduation-cap"></i> BSc Computer Science</div>
+            <div class="highlight-item"><i class="fas fa-map-pin"></i> Kenya</div>
+            <div class="highlight-item"><i class="fas fa-chart-bar"></i> Data Science Focus</div>
+          </div>
+        </div>
+        <div class="about-cards reveal">
+          <div class="achievement-card">
+            <div class="achievement-number">01</div>
+            <h3>Computer Science Student</h3>
+            <p>Building a strong foundation in algorithms, databases, and software development at MMUST.</p>
+          </div>
+          <div class="achievement-card">
+            <div class="achievement-number">02</div>
+            <h3>Data Science Enthusiast</h3>
+            <p>Exploring statistical analysis, data visualization, and predictive modelling with Python and R.</p>
+          </div>
+          <div class="achievement-card">
+            <div class="achievement-number">03</div>
+            <h3>Continuous Learner</h3>
+            <p>Always expanding my toolkit — from SPSS to Power BI to Scikit-learn and TensorFlow.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">02 — TOOLKIT</span>
+        <h2 class="section-title">MY TECHNICAL <span class="gradient-text">ARSENAL</span></h2>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-category reveal">
+          <h3><i class="fas fa-code"></i> Programming</h3>
+          <div class="skill-tags">
+            <span>Python</span><span>R</span><span>JavaScript</span><span>HTML5</span><span>CSS3</span>
+          </div>
+        </div>
+        <div class="skill-category reveal">
+          <h3><i class="fas fa-chart-simple"></i> Data Analysis</h3>
+          <div class="skill-tags">
+            <span>Pandas</span><span>NumPy</span><span>Data Cleaning</span><span>EDA</span><span>Data Transformation</span><span>Statistical Analysis</span>
+          </div>
+        </div>
+        <div class="skill-category reveal">
+          <h3><i class="fas fa-calculator"></i> Statistical Tools</h3>
+          <div class="skill-tags">
+            <span>SPSS</span><span>PSPP</span><span>RStudio</span><span>Descriptive Statistics</span><span>Inferential Statistics</span><span>Hypothesis Testing</span>
+          </div>
+        </div>
+        <div class="skill-category reveal">
+          <h3><i class="fas fa-chart-pie"></i> Data Visualization</h3>
+          <div class="skill-tags">
+            <span>Power BI</span><span>Matplotlib</span><span>Seaborn</span><span>Data Storytelling</span><span>Dashboard Development</span>
+          </div>
+        </div>
+        <div class="skill-category reveal">
+          <h3><i class="fas fa-database"></i> Database Management</h3>
+          <div class="skill-tags">
+            <span>SQL</span><span>MySQL</span><span>SQLite</span><span>Database Design</span>
+          </div>
+        </div>
+        <div class="skill-category reveal">
+          <h3><i class="fas fa-robot"></i> Machine Learning & AI</h3>
+          <div class="skill-tags">
+            <span>Scikit-learn</span><span>TensorFlow</span><span>Predictive Analytics</span><span>Classification</span><span>Regression</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">03 — PORTFOLIO</span>
+        <h2 class="section-title">TURNING DATA INTO <span class="gradient-text">ACTIONABLE INSIGHTS</span></h2>
+      </div>
+      <div class="project-filters reveal">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="analytics">Analytics</button>
+        <button class="filter-btn" data-filter="statistics">Statistics</button>
+        <button class="filter-btn" data-filter="machine-learning">Machine Learning</button>
+      </div>
+      <div class="projects-grid" id="projectsGrid">
+        <!-- Project 1 -->
+        <div class="project-card reveal" data-category="analytics">
+          <div class="project-image">
+            <div class="project-mockup">
+              <i class="fas fa-chart-line"></i>
+              <span>Student Analytics Dashboard</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>Student Performance Analytics</h3>
+            <p>An analytical project designed to examine student academic performance, attendance, study habits and academic risk factors.</p>
+            <div class="project-tech">
+              <span>Python</span><span>Pandas</span><span>Streamlit</span><span>Matplotlib</span>
+            </div>
+            <ul class="project-features">
+              <li>Student performance analysis</li>
+              <li>Attendance analysis</li>
+              <li>Department & gender filtering</li>
+              <li>Identification of at-risk students</li>
+              <li>Interactive analytical dashboard</li>
+            </ul>
+            <div class="project-links">
+              <a href="https://github.com/deinerwalusala-create" target="_blank" class="btn-sm"><i class="fab fa-github"></i> Repository</a>
+              <a href="#" class="btn-sm btn-disabled" aria-disabled="true"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+              <button class="btn-sm view-details" data-project="0"><i class="fas fa-info-circle"></i> Details</button>
+            </div>
+          </div>
+        </div>
+        <!-- Project 2 -->
+        <div class="project-card reveal" data-category="analytics">
+          <div class="project-image">
+            <div class="project-mockup">
+              <i class="fas fa-chart-bar"></i>
+              <span>Sales Analytics</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>Business Sales Analytics</h3>
+            <p>An analytical project focused on understanding business sales performance and identifying trends through data analysis.</p>
+            <div class="project-tech">
+              <span>Python</span><span>Pandas</span><span>Matplotlib</span>
+            </div>
+            <ul class="project-features">
+              <li>Sales performance analysis</li>
+              <li>Data cleaning</li>
+              <li>Revenue analysis</li>
+              <li>Trend identification</li>
+              <li>Data visualization</li>
+            </ul>
+            <div class="project-links">
+              <a href="https://github.com/deinerwalusala-create" target="_blank" class="btn-sm"><i class="fab fa-github"></i> Repository</a>
+              <a href="#" class="btn-sm btn-disabled" aria-disabled="true"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+              <button class="btn-sm view-details" data-project="1"><i class="fas fa-info-circle"></i> Details</button>
+            </div>
+          </div>
+        </div>
+        <!-- Project 3 -->
+        <div class="project-card reveal" data-category="statistics">
+          <div class="project-image">
+            <div class="project-mockup">
+              <i class="fas fa-shield-halved"></i>
+              <span>Cybersecurity Stats</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>Cybersecurity Data Analysis</h3>
+            <p>A statistical analysis project exploring cybersecurity awareness, employee training and security performance.</p>
+            <div class="project-tech">
+              <span>PSPP</span><span>SPSS</span><span>Statistical Analysis</span>
+            </div>
+            <ul class="project-features">
+              <li>Data preparation</li>
+              <li>Variable labeling</li>
+              <li>Frequency distributions</li>
+              <li>Descriptive statistics</li>
+              <li>Pre/post-training comparisons</li>
+              <li>Statistical interpretation</li>
+            </ul>
+            <div class="project-links">
+              <a href="https://github.com/deinerwalusala-create" target="_blank" class="btn-sm"><i class="fab fa-github"></i> Repository</a>
+              <a href="#" class="btn-sm btn-disabled" aria-disabled="true"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+              <button class="btn-sm view-details" data-project="2"><i class="fas fa-info-circle"></i> Details</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project Details Modal -->
+  <div id="projectModal" class="modal">
+    <div class="modal-content">
+      <button class="modal-close" id="modalClose">&times;</button>
+      <h2 id="modalTitle"></h2>
+      <p id="modalDescription"></p>
+      <div id="modalTech" class="project-tech"></div>
+      <ul id="modalFeatures" class="project-features"></ul>
+      <div class="modal-links">
+        <a href="https://github.com/deinerwalusala-create" target="_blank" class="btn btn-primary"><i class="fab fa-github"></i> View on GitHub</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Workflow Section -->
+  <section id="workflow" class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">04 — METHODOLOGY</span>
+        <h2 class="section-title">HOW I <span class="gradient-text">APPROACH DATA</span></h2>
+      </div>
+      <div class="workflow-timeline">
+        <div class="workflow-step reveal">
+          <div class="step-icon"><i class="fas fa-database"></i></div>
+          <div class="step-content">
+            <span class="step-number">01</span>
+            <h3>Data Collection</h3>
+            <p>Gathering raw data from various sources — databases, APIs, and files — with a focus on relevance and quality.</p>
+          </div>
+        </div>
+        <div class="workflow-step reveal">
+          <div class="step-icon"><i class="fas fa-broom"></i></div>
+          <div class="step-content">
+            <span class="step-number">02</span>
+            <h3>Data Cleaning</h3>
+            <p>Handling missing values, removing duplicates, and transforming data into a consistent, analysis-ready format.</p>
+          </div>
+        </div>
+        <div class="workflow-step reveal">
+          <div class="step-icon"><i class="fas fa-magnifying-glass-chart"></i></div>
+          <div class="step-content">
+            <span class="step-number">03</span>
+            <h3>Exploratory Data Analysis</h3>
+            <p>Discovering patterns, trends, and anomalies through statistical summaries and visual exploration.</p>
+          </div>
+        </div>
+        <div class="workflow-step reveal">
+          <div class="step-icon"><i class="fas fa-calculator"></i></div>
+          <div class="step-content">
+            <span class="step-number">04</span>
+            <h3>Statistical Analysis</h3>
+            <p>Applying descriptive and inferential statistics to test hypotheses and quantify relationships.</p>
+          </div>
+        </div>
+        <div class="workflow-step reveal">
+          <div class="step-icon"><i class="fas fa-chart-pie"></i></div>
+          <div class="step-content">
+            <span class="step-number">05</span>
+            <h3>Data Visualization</h3>
+            <p>Creating clear, impactful charts and dashboards that tell a compelling data story.</p>
+          </div>
+        </div>
+        <div class="workflow-step reveal">
+          <div class="step-icon"><i class="fas fa-robot"></i></div>
+          <div class="step-content">
+            <span class="step-number">06</span>
+            <h3>ML & Predictive Modelling</h3>
+            <p>Building models for classification, regression, and forecasting to support data-driven decisions.</p>
+          </div>
+        </div>
+        <div class="workflow-step reveal">
+          <div class="step-icon"><i class="fas fa-file-lines"></i></div>
+          <div class="step-content">
+            <span class="step-number">07</span>
+            <h3>Insights & Reporting</h3>
+            <p>Communicating findings and recommendations through reports and interactive presentations.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section id="education" class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">05 — ACADEMIC</span>
+        <h2 class="section-title">ACADEMIC <span class="gradient-text">BACKGROUND</span></h2>
+      </div>
+      <div class="education-timeline reveal">
+        <div class="edu-card">
+          <div class="edu-icon"><i class="fas fa-university"></i></div>
+          <div class="edu-content">
+            <h3>Masinde Muliro University of Science and Technology</h3>
+            <p class="edu-degree">Bachelor of Science in Computer Science</p>
+            <div class="edu-meta">
+              <span><i class="fas fa-level-up-alt"></i> Third Year</span>
+              <span><i class="fas fa-map-pin"></i> Kenya</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GitHub Section -->
+  <section id="github" class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">06 — OPEN SOURCE</span>
+        <h2 class="section-title">MY DEVELOPMENT <span class="gradient-text">ACTIVITY</span></h2>
+      </div>
+      <div class="github-stats reveal">
+        <div class="github-card">
+          <img src="https://github-readme-stats.vercel.app/api?username=deinerwalusala-create&show_icons=true&theme=tokyonight&hide_border=true" alt="GitHub Stats" loading="lazy" onerror="this.style.display='none'; this.parentElement.innerHTML='<p class=\'fallback-text\'>GitHub stats temporarily unavailable.</p>'">
+        </div>
+        <div class="github-card">
+          <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=deinerwalusala-create&layout=compact&theme=tokyonight&hide_border=true" alt="Top Languages" loading="lazy" onerror="this.style.display='none'; this.parentElement.innerHTML='<p class=\'fallback-text\'>Language stats temporarily unavailable.</p>'">
+        </div>
+        <div class="github-card full-width">
+          <img src="https://streak-stats.demolab.com?user=deinerwalusala-create&theme=tokyonight&hide_border=true" alt="Contribution Streak" loading="lazy" onerror="this.style.display='none'; this.parentElement.innerHTML='<p class=\'fallback-text\'>Contribution streak temporarily unavailable.</p>'">
+        </div>
+        <div class="github-card full-width">
+          <img src="https://github-readme-activity-graph.vercel.app/graph?username=deinerwalusala-create&theme=tokyo-night&hide_border=true" alt="Contribution Activity Graph" loading="lazy" onerror="this.style.display='none'; this.parentElement.innerHTML='<p class=\'fallback-text\'>Activity graph temporarily unavailable.</p>'">
+        </div>
+      </div>
+      <div class="github-cta reveal">
+        <a href="https://github.com/deinerwalusala-create" target="_blank" class="btn btn-primary"><i class="fab fa-github"></i> VISIT MY GITHUB PROFILE</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interests Section -->
+  <section id="interests" class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">07 — EXPLORING</span>
+        <h2 class="section-title">AREAS I'M <span class="gradient-text">EXPLORING</span></h2>
+      </div>
+      <div class="interests-grid">
+        <div class="interest-card reveal">
+          <i class="fas fa-brain"></i>
+          <h3>Artificial Intelligence</h3>
+          <p>Building intelligent systems that can learn, reason, and assist in complex decision-making.</p>
+        </div>
+        <div class="interest-card reveal">
+          <i class="fas fa-robot"></i>
+          <h3>Machine Learning</h3>
+          <p>Training models to identify patterns and make predictions from data.</p>
+        </div>
+        <div class="interest-card reveal">
+          <i class="fas fa-chart-line"></i>
+          <h3>Predictive Analytics</h3>
+          <p>Forecasting future trends and behaviours using statistical and ML techniques.</p>
+        </div>
+        <div class="interest-card reveal">
+          <i class="fas fa-server"></i>
+          <h3>Big Data</h3>
+          <p>Exploring scalable technologies for processing and analysing large datasets.</p>
+        </div>
+        <div class="interest-card reveal">
+          <i class="fas fa-chart-pie"></i>
+          <h3>Business Intelligence</h3>
+          <p>Creating dashboards and reports that support strategic business decisions.</p>
+        </div>
+        <div class="interest-card reveal">
+          <i class="fas fa-square-root-variable"></i>
+          <h3>Statistical Modelling</h3>
+          <p>Applying rigorous statistical methods to understand and quantify real-world phenomena.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">08 — CONNECT</span>
+        <h2 class="section-title">LET'S CONNECT AND <span class="gradient-text">BUILD SOMETHING MEANINGFUL</span></h2>
+        <p class="section-subtitle">I'm always interested in connecting with people passionate about Data Science, Artificial Intelligence, technology and innovative solutions.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <div class="contact-item">
+            <i class="fas fa-user"></i>
+            <div><h4>Name</h4><p>Deiner Walusala</p></div>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <div><h4>Email</h4><a href="mailto:deinerwalusala@gmail.com">deinerwalusala@gmail.com</a></div>
+          </div>
+          <div class="contact-item">
+            <i class="fab fa-github"></i>
+            <div><h4>GitHub</h4><a href="https://github.com/deinerwalusala-create" target="_blank">github.com/deinerwalusala-create</a></div>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-map-pin"></i>
+            <div><h4>Location</h4><p>Kenya</p></div>
+          </div>
+        </div>
+        <form class="contact-form reveal" id="contactForm" novalidate>
+          <div class="form-group">
+            <input type="text" id="fullName" name="fullName" placeholder="Full Name" required>
+            <span class="error-msg" id="nameError"></span>
+          </div>
+          <div class="form-group">
+            <input type="email" id="email" name="email" placeholder="Email Address" required>
+            <span class="error-msg" id="emailError"></span>
+          </div>
+          <div class="form-group">
+            <input type="text" id="subject" name="subject" placeholder="Subject" required>
+            <span class="error-msg" id="subjectError"></span>
+          </div>
+          <div class="form-group">
+            <textarea id="message" name="message" placeholder="Message" rows="5" required></textarea>
+            <span class="error-msg" id="messageError"></span>
+          </div>
+          <button type="submit" class="btn btn-primary"><i class="fas fa-paper-plane"></i> SEND MESSAGE</button>
+          <p class="form-note">* This form is ready for integration with Formspree. No messages are sent until configured.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <h3>DEINER WALUSALA</h3>
+          <p>Data Scientist | Data Analyst | Computer Science Student</p>
+          <div class="footer-socials">
+            <a href="https://github.com/deinerwalusala-create" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="mailto:deinerwalusala@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <a href="index.html?page=home">Home</a>
+          <a href="index.html?page=about">About</a>
+          <a href="index.html?page=skills">Skills</a>
+          <a href="index.html?page=projects">Projects</a>
+          <a href="index.html?page=contact">Contact</a>
+        </div>
+        <div class="footer-links">
+          <h4>Explore</h4>
+          <a href="index.html?page=workflow">Workflow</a>
+          <a href="index.html?page=education">Education</a>
+          <a href="index.html?page=github">GitHub</a>
+          <a href="index.html?page=interests">Interests</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="year"></span> Deiner Walusala. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <button id="backToTop" class="back-to-top" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script src="css/js/script.js"></script>
+</body>
+</html>
